@@ -278,7 +278,7 @@ header .logo {
   border: 0.25rem solid white;
   align-items: center;
   font-size: 1em;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Courier New", monospace;
   font-weight: bold;
   color: white;
   text-shadow: 0.3rem 0.3rem 2rem white;
@@ -412,8 +412,6 @@ img.goal-image {
     margin-top: 5%;
   }
   .reset:hover {
-    height: 3rem;
-    width: 3rem;
   }
 
   .bgm {
