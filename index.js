@@ -1,8 +1,9 @@
 let gridRows = 3; //number of rows in grid
 
 let ansGrid = answerGrid(gridRows); //the solution grid
+let grid = answerGrid(gridRows); //the solution grid
 
-let grid = randomGrid(gridRows); //random current grid which will be displayed
+// let grid = randomGrid(gridRows); //random current grid which will be displayed
 
 makeHTMLGrid(gridRows);
 
@@ -122,6 +123,13 @@ modeButton.forEach((mode) => {
     modeButton.forEach((m) => m.classList.remove("active"));
     mode.classList.add("active");
     gridRows = document.querySelector(".mode .active").classList[0];
+    document.querySelectorAll(".box").forEach((x) => {
+      x.classList.remove("box-hidden");
+      document.querySelector(".grid").classList.remove("grid-victory");
+      document
+        .querySelector(".victory-hidden")
+        .classList.remove("victory-show");
+    });
     grid = randomGrid(gridRows);
 
     makeHTMLGrid(gridRows);
