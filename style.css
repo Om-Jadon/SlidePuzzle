@@ -410,8 +410,11 @@ img.goal-image {
     width: 2.5rem;
     order: 1;
     margin-top: 5%;
+    transition: none;
   }
   .reset:hover {
+    height: 2.5rem;
+    width: 2.5rem;
   }
 
   .bgm {
