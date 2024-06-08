@@ -64,6 +64,9 @@ document.addEventListener("keydown", function (event) {
     event.preventDefault();
     endX = event.touches[0].clientX;
     endY = event.touches[0].clientY;
+  }
+
+  function handleTouchEnd() {
     let diffX = endX - startX;
     let diffY = endY - startY;
 
@@ -90,8 +93,6 @@ document.addEventListener("keydown", function (event) {
         sound.play();
       }
     }
-    startX = endX;
-    startY = endY;
     updateHTMLGrid(gridRows);
     if (isVictory()) {
       document.querySelectorAll(".box").forEach((x) => {
@@ -109,6 +110,7 @@ document.addEventListener("keydown", function (event) {
 
   gridElement.addEventListener("touchstart", handleTouchStart, false);
   gridElement.addEventListener("touchmove", handleTouchMove, false);
+  gridElement.addEventListener("touchend", handleTouchEnd, false);
 }
 
 // change the grid rows and the grid displays when clicked on a mode.
